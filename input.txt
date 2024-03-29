@@ -1,0 +1,14 @@
+// what is 2 to the power of 7?
+// here I tried typing assembly code from scratch. Base and exponent are declared in line 4 and 5 resp.
+// line 4-7 are init, line 8-13 the loop. R4 (line 4) contains the base, R6 (line 5) contains the exponent
+M R4 0x02
+M R6 0x07
+M R3 R4
+M R5 0x01
++ R5 1
+M R5 R0
+* R3 R4
+M R3 R0
+C R5 R6
+BNQ 0x08
+H
